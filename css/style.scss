@@ -11,12 +11,14 @@
     height: 100vh;
     background: #000;
     .clock{
-        width: 25rem;
-        height: 25rem;
+        width: 40rem;
+        height:40rem;
         background: #16181D;
         border-radius: 50%;
         position: relative;
         color: #FFF;
+        box-shadow: 0px 0px 20px gray;
+
         .box_2{
             width: .5rem;
             height: .5rem;
@@ -29,35 +31,35 @@
             box-shadow: 0px 0px 5px 4px #fff;
         }
         .s_line{
-            width: 40%;
-            margin-left: 10%;
-            height: 3px;
+            width: 3px;
+            margin-top: 10%;
+            height: 40%;
             background: #fff;
             position: absolute;
-            top: 50%;
+            left: 50%;
             animation: s 60s linear infinite;
-            transform-origin: 100%;  
+            transform-origin: bottom;  
         }
         .m_line{
-            width: 35%;
-            margin-left: 15%;
-            height: 3px;
+            width: 3px;
+            margin-top: 15%;
+            height: 35%;
             background: #fff;
             position: absolute;
-            top: 50%;
+            left: 50%;
             animation: m 3600s linear infinite;
-            transform-origin: 100%;
+            transform-origin: bottom;
             
-        }
+            }
         .h_line{
-            width: 25%;
-            margin-left: 25%;
-            height: 3px;
+            width: 3px;
+            margin-top: 25%;
+            height: 25%;
             background: #fff;
             position: absolute;
-            top: 50%;
+            left: 50%;
             animation: h 216000s linear infinite;
-            transform-origin: 100%;
+            transform-origin: bottom;
             
         }
         .item_0{
@@ -139,27 +141,47 @@
 
 @keyframes s{
     0%{
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     100%{
-        transform: rotate(450deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes m{
     0%{
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     100%{
-        transform: rotate(450deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes h{
     0%{
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
     100%{
-        transform: rotate(450deg);
+        transform: rotate(360deg);
     }
 }
+
+
+
+@media only screen and (max-width: 786px) {
+    .box{
+        .clock{
+            width: 20rem;
+            height:20rem;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .box{
+        .clock{
+            width: 15rem;
+            height:15rem;
+        }
+    }
+  }
